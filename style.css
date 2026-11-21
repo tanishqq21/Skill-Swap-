@@ -1,0 +1,71 @@
+/* SkillSwap Lite - simple colourful style */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Trebuchet MS', Verdana, sans-serif; background: #fff7ec; color: #2d2a3e; line-height: 1.5; }
+a { color: #6a35e8; }
+
+/* Header: stays at the top while scrolling (position: sticky) */
+header { background: #5b2bd6; position: sticky; top: 0; z-index: 10; }
+.bar { max-width: 1000px; margin: auto; padding: 12px 18px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+.logo { color: #fff; font-size: 24px; font-weight: bold; text-decoration: none; }
+.logo span { color: #ffd23f; }
+nav a { color: #fff; text-decoration: none; margin-left: 16px; }
+nav a:hover { color: #ffd23f; }
+nav a.join { background: #ff8a3d; padding: 6px 14px; border-radius: 20px; }
+
+main { max-width: 1000px; margin: auto; padding: 24px 18px 50px; }
+h2 { margin: 26px 0 12px; color: #5b2bd6; }
+
+/* Home page */
+.hero { text-align: center; padding: 40px 10px; background: #ffe3b8; border-radius: 20px; }
+.hero h1 { font-size: 38px; margin-bottom: 10px; color: #3b1c9e; }
+.hero p { margin-bottom: 18px; }
+.numbers { display: flex; justify-content: center; gap: 30px; margin: 22px 0; }
+.numbers div { background: #fff; padding: 14px 30px; border-radius: 14px; text-align: center; border-bottom: 5px solid #00b894; }
+.numbers b { font-size: 30px; color: #00b894; }
+.steps { display: flex; gap: 16px; flex-wrap: wrap; }
+.step { flex: 1; min-width: 220px; padding: 18px; border-radius: 14px; background: #fff; }
+.s1 { border-top: 6px solid #ff6f61; } .s2 { border-top: 6px solid #0984e3; } .s3 { border-top: 6px solid #00b894; }
+
+/* Buttons */
+.btn { display: inline-block; background: #6a35e8; color: #fff; border: 0; padding: 10px 22px; border-radius: 22px; font-size: 15px; cursor: pointer; text-decoration: none; font-family: inherit; }
+.btn:hover { background: #5322c4; }
+.btn2 { background: #ff8a3d; }
+.btn2:hover { background: #e8741f; }
+
+/* Forms */
+.box { max-width: 480px; margin: 10px auto; background: #fff; padding: 24px; border-radius: 16px; border-top: 6px solid #6a35e8; }
+label { display: block; margin: 12px 0 4px; font-weight: bold; font-size: 14px; }
+input, select, textarea { width: 100%; padding: 9px 12px; border: 2px solid #d9cffa; border-radius: 10px; font-family: inherit; font-size: 15px; }
+input:focus, select:focus, textarea:focus { outline: none; border-color: #6a35e8; }
+.box .btn { margin-top: 16px; width: 100%; }
+.two { display: flex; gap: 12px; }
+.two div { flex: 1; }
+.search { display: flex; gap: 10px; margin-bottom: 8px; }
+.search .btn { width: auto; margin: 0; }
+.row { display: flex; gap: 8px; margin-top: 8px; }
+.small { font-size: 13px; color: #6b6785; }
+.error { background: #ffe0e0; color: #b30000; padding: 8px 12px; border-radius: 8px; }
+.ok { background: #d9f7ec; color: #0a7a58; padding: 8px 12px; border-radius: 8px; margin: 8px 0; }
+.note { background: #fff0c2; padding: 8px 12px; border-radius: 8px; margin-top: 8px; }
+
+/* Student cards: a grid that changes the number of columns by itself */
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+.student { background: #fff; padding: 18px; border-radius: 14px; border-top: 6px solid #ff6f61; }
+.student:nth-child(2n) { border-top-color: #0984e3; }
+.student:nth-child(3n) { border-top-color: #00b894; }
+.student h3 { margin: 6px 0 2px; }
+.avatar { width: 52px; height: 52px; border-radius: 50%; color: #fff; font-size: 24px; font-weight: bold; display: flex; align-items: center; justify-content: center; }
+.avatar.big { width: 80px; height: 80px; font-size: 36px; margin: 0 auto 8px; }
+.chip { display: inline-block; padding: 2px 11px; border-radius: 14px; font-size: 13px; margin: 2px; }
+.teach { background: #e3dbff; color: #4a21b8; }
+.want { background: #ffe0d6; color: #c24a21; }
+.student p { margin: 6px 0; }
+
+footer { text-align: center; padding: 20px; background: #5b2bd6; color: #fff; }
+
+/* Responsive: on phones the menu and rows stack */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 28px; }
+  .two, .search, .numbers { flex-direction: column; }
+  nav a { margin: 0 10px 0 0; }
+}
